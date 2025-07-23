@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js"></script>
+<body>
+    <header>
+        <nav class="navbar">
+            <h2>Recipes</h2>
+            <div class="nav_buttons">
+               <button onclick="delayedCategoryRequest('Pizza')">Pizza</button>
+               <button onclick="delayedCategoryRequest('Pasta')">Pasta</button>
+               <button onclick="delayedCategoryRequest('Popcorn')">Popcorn</button>
+               <button onclick="delayedCategoryRequest('Salad')">Salad</button>
+            </div>
+        </nav>
+    </header>
+    <section class="main_section">
+        <div class="food-section pizza-section">
+            <div class="section-content">
+                <h2>Pizza</h2>
+                <p>Discover the art of making authentic Italian pizzas with fresh ingredients and traditional techniques. From classic Margherita to gourmet toppings.</p>
+                <button onclick="delayedCategoryRequest('Pizza')" class="section-btn">View Pizza Recipes</button>
+            </div>
+        </div>
+        
+        <div class="food-section pasta-section">
+            <div class="section-content">
+                <h2>Pasta</h2>
+                <p>Explore a world of pasta dishes from creamy carbonara to spicy arrabbiata. Perfect for quick weeknight dinners or elegant entertaining.</p>
+                <button onclick="delayedCategoryRequest('Pasta')" class="section-btn">View Pasta Recipes</button>
+            </div>
+        </div>
+        
+        <div class="food-section popcorn-section">
+            <div class="section-content">
+                <h2>Popcorn</h2>
+                <p>Transform simple popcorn into gourmet snacks with creative seasonings and toppings. Perfect for movie nights and parties.</p>
+                <button onclick="delayedCategoryRequest('Popcorn')" class="section-btn">View Popcorn Recipes</button>
+            </div>
+        </div>
+        
+        <div class="food-section salad-section">
+            <div class="section-content">
+                <h2>Salad</h2>
+                <p>Fresh, healthy, and delicious salads that are both nutritious and satisfying. From light garden salads to hearty meal bowls.</p>
+                <button onclick="delayedCategoryRequest('Salad')" class="section-btn">View Salad Recipes</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="recipeModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Recipe Details</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-info" id="modalInfo">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
